@@ -53,7 +53,9 @@ void gestioneMatrice::task_frame(void *pvParameters)
     {
       f->dati[0]= 0x00000000;
       f->dati[1]= 0x00000000;
-      f->dati[2]= 0x00000000;     
+      f->dati[2]= 0x00000000; 
+      matrix.loadFrame(f->dati);  
+      vTaskDelay(pdMS_TO_TICKS(250));  
       f->dati[0]= 0xFFFFFFFF;
       f->dati[1]= 0xFFFFFFFF;
       f->dati[2]= 0xFFFFFFFF;
