@@ -37,7 +37,7 @@ void gestioneMatrice::task_frame(void *pvParameters)
   for(;;)
   {
     int bit;
-    for(bit=0;bit<32;bit++)
+    for(bit=0;bit<=32;bit++)
     {
       f->dati[0] |= (1UL << bit);
       f->dati[1] |= (1UL << bit);
@@ -49,7 +49,7 @@ void gestioneMatrice::task_frame(void *pvParameters)
 
     uint8_t conta =0;
     
-    for(conta=0;conta<3;++conta)
+    for(conta=0;conta<=3;++conta)
     {
       f->dati[0]= 0x00000000;
       f->dati[1]= 0x00000000;
